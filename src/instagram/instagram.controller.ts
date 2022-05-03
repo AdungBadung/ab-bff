@@ -5,11 +5,11 @@ import { InstagramService } from './instagram.service';
 export class InstagramController {
   constructor(private _instagramService: InstagramService) {}
 
-  @Get('/search/top_media/:hashtag')
+  @Get('/search/topmedia/:hashtag')
   async top_media(@Param('hashtag') hashtag: string): Promise<string> {
     return this._instagramService.top_media(hashtag);
   }
-  @Get('/search/recent_media/:hashtag')
+  @Get('/search/recentmedia/:hashtag')
   async recent_media(@Param('hashtag') hashtag: string): Promise<string> {
     return this._instagramService.recent_media(hashtag);
   }
