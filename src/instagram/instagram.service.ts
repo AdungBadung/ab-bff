@@ -21,7 +21,8 @@ export class InstagramService {
   }
 
   async ig_hashtag_search(instagram_id, hashtag): Promise<string> {
-    const endpoint = `/v13.0/ig_hashtag_search?user_id=${instagram_id}&q=${hashtag}&access_token=${this.API_KEY}`;
+    const encodedHashTag = encodeURIComponent(hashtag);
+    const endpoint = `/v13.0/ig_hashtag_search?user_id=${instagram_id}&q=${encodedHashTag}&access_token=${this.API_KEY}`;
     const response = await axios.get(`${this._host}${endpoint}`);
     return response.data.data[0].id;
   }
