@@ -1,7 +1,7 @@
 import { Controller, Get, Param, Query, Req } from '@nestjs/common';
 import { GoogleService } from './google.service';
 
-@Controller('google')
+@Controller('google/search')
 export class GoogleController {
   constructor(private _googleService: GoogleService) {}
 
