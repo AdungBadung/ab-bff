@@ -3,6 +3,7 @@ import { ConfigModule } from '@nestjs/config';
 import { InstagramModule } from './instagram/instagram.module';
 import { YoutubeModule } from './youtube/youtube.module';
 import { GoogleModule } from './google/google.module';
+import { NaverModule } from './naver/naver.module';
 
 @Module({
   imports: [
@@ -10,6 +11,7 @@ import { GoogleModule } from './google/google.module';
     InstagramModule,
     YoutubeModule,
     GoogleModule,
+    NaverModule,
   ],
 })
 export class AppModule {}
