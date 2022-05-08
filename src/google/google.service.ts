@@ -11,7 +11,7 @@ export class GoogleService {
     const queryString = Object.keys(query)
       .map((k) => {
         const v = query[k];
-        return `&${k}=${v}`;
+        return `&${k}=${encodeURIComponent(v)}`;
       })
       .join('');
     const response = await axios.get(`${this._host}${endpoint}${queryString}`);
