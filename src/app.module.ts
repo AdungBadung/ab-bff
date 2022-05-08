@@ -4,8 +4,8 @@ import { InstagramModule } from './instagram/instagram.module';
 import { YoutubeModule } from './youtube/youtube.module';
 import { GoogleModule } from './google/google.module';
 import { NaverModule } from './naver/naver.module';
-import { DaumController } from './daum/daum.controller';
 import { DaumModule } from './daum/daum.module';
+import { TwitterModule } from './twitter/twitter.module';
 
 @Module({
   imports: [
@@ -15,6 +15,7 @@ import { DaumModule } from './daum/daum.module';
     GoogleModule,
     NaverModule,
     DaumModule,
+    TwitterModule,
   ],
 })
 export class AppModule {}
