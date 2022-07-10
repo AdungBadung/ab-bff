@@ -4,6 +4,6 @@ import { TwitterService } from './twitter.service';
 
 @Module({
   controllers: [TwitterController],
-  providers: [TwitterService]
+  providers: [TwitterService],
 })
 export class TwitterModule {}
